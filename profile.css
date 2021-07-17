@@ -144,98 +144,155 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: bold;
-}
-.wrap {
-  margin: 0 auto;
-  max-width: 100%;
   font-size: 24px;
   line-height: 1.5;
 }
+/* container 語意：將最重要的內容放在畫面中間 */
+.container {
+  width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
 /* header */
 .header {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   height: 958px;
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week2/banner.png) no-repeat center center;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week2/banner.png)
+    no-repeat center center;
 }
 .content {
   width: 345px;
-  position: absolute;
   top: 32%;
   left: 42%;
 }
 .content img {
   margin: 50px 5px 0;
 }
-.name{
+.name {
   font-size: 80px;
 }
-/* About */
-.info{
-  width: 960px;
-  margin: 50px auto;
-  text-align: center;
+.heres {
+  font-size: 30px;
 }
-.info img{
+.sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sns:hover {
+  transform: scale(1.5);
+}
+/* About */
+.container img {
   margin: 20px 0;
 }
-.title{
+.title {
   font-size: 65px;
 }
-.school{
+.school {
   width: 500px;
   margin: 0 auto;
   padding-bottom: 20px;
   border-bottom: 1px solid #000;
 }
-.experience{
+.experience {
   margin-top: 20px;
 }
-.circle{
+.experience li{
+  margin-top: 28px;
+}
+.experience li::before {
+  content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   margin-right: 10px;
   background-color: #891818;
   border-radius: 50%;
 }
 /* Brand */
-.brand,.footer{
+.brand,
+.footer {
   text-align: center;
   color: #fff;
   background-color: #000;
 }
-.brand{
-  padding: 50px 0;
+.brand {
+  padding: 56px 0;
 }
-.brand P{
+.brand P {
   margin-bottom: 30px;
 }
-.subTitle{
-  margin: 0 auto;
+.subTitle {
+  margin-top: 30px;
   font-size: 18px;
 }
-.brandImg{
+.brandImg {
   margin: 30px 5px 30px 5px;
 }
-/* works */
-.works{
-  width: 1500px;
-  text-align: center;
-  margin: 50px auto;
-}
-.worksList{
+.firstBrandImg {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.worksList li{
-  margin: 10px;
+/* works */
+.worksList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.worksList li {
+  margin: 56px 10px 48px 0;
 }
 /* footer */
-.footer{
+.footer {
   padding: 50px 0;
 }
-.footer li{
+.footer li {
   font-size: 18px;
+}
+.footer a {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  /* header */
+  .content p,
+  h1 {
+    display: none;
+  }
+  .content img {
+    display: flex;
+  }
+  /* About */
+  .info {
+    width: 960px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  .info img {
+    margin: 20px 0;
+  }
+  .title {
+    font-size: 65px;
+  }
+  .school {
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+  }
+  .experience {
+    margin-top: 20px;
+  }
+  .circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #891818;
+    border-radius: 50%;
+  }
 }
