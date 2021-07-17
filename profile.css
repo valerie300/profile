@@ -245,7 +245,7 @@ body {
   justify-content: space-between;
 }
 .worksList li {
-  margin: 56px 10px 48px 0;
+  margin: 56px 0 48px 0;
 }
 /* footer */
 .footer {
